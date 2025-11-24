@@ -21,7 +21,7 @@ int main(void) {
 	puts("Give two number");
 	int valueOne, valueTwo = 0;
 	if (2 != scanf("%d %d", &valueOne, &valueTwo)){
-		fprintf(stderr, "Not valid value(s)!!!\n");
+		fprintf(stderr, "Not valid value(s)!!!");
 		return EXIT_FAILURE;
 	}
 	printf("%4d + %d  = %4d\n", valueOne,valueTwo, valueOne+valueTwo);
