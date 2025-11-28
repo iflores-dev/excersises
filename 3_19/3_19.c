@@ -1,7 +1,7 @@
 
 /*
  =======================================================================================
- Name        : 3_17.c
+ Name        : 3_19.c
  Author      : Isaac Flores
  Version     :
  Copyright   : Your copyright notice
@@ -23,27 +23,27 @@ int main(void) {
     // Prompt user for loan principal
     puts("Enter loan principal (-1 to end):");
     float principal_f = 0.0f;                                   // Variable to store principal amount
-    if (VALID_INPUT != scanf_s("%f", &principal_f)) {           // Input validation
-        fprintf(stderr, "Invalid input, exiting program..."); 
+    if (VALID_INPUT != scanf("%f", &principal_f)) {           // Input validation
+        fprintf(stderr, "Invalid input, exiting program...\n"); 
         return EXIT_FAILURE;                                    // Exit on invalid input
     }
     while (EOF != principal_f) {                                // Loop until EOF or sentinel value 
     puts("Enter interest rate:");                               // Prompt for interest rate
         float rate_f = 0.0f;                                   // Variable to store interest rate
-        if (VALID_INPUT != scanf_s("%f", &rate_f)) {           // Input validation
-            fprintf(stderr, "Invalid input, exiting program...");   
+        if (VALID_INPUT != scanf("%f", &rate_f)) {           // Input validation
+            fprintf(stderr, "Invalid input, exiting program...\n");   
             return EXIT_FAILURE;
         }
         puts("Enter term of the loan in days:");                     // Prompt for loan term in days
         int days_i = 0;                                              // Variable to store number of days
-        if (VALID_INPUT != scanf_s("%d", &days_i)) {                 // Input validation
-            fprintf(stderr, "Invalid input, exiting program..."); 
+        if (VALID_INPUT != scanf("%d", &days_i)) {                 // Input validation
+            fprintf(stderr, "Invalid input, exiting program...\n"); 
             return EXIT_FAILURE;
         }  
         printf("The interest charge is: %.2f\n", principal_f * rate_f * days_i / 365.0f);   // Calculate and display interest
         puts("\nEnter loan principal (-1 to end):");                                        // Prompt for next principal
-        if (VALID_INPUT != scanf_s("%f", &principal_f)) {                                   // Input validation
-            fprintf(stderr, "Invalid input, exiting program...");
+        if (VALID_INPUT != scanf("%f", &principal_f)) {                                   // Input validation
+            fprintf(stderr, "Invalid input, exiting program...\n");
             return EXIT_FAILURE;
         } 
     }
