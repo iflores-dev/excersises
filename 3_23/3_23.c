@@ -29,7 +29,7 @@
         uint8_t number_ui8  = 0;
         uint8_t largest_ui8 = 0;
     
-        while (counter_ui8 < SERIES_COUNT) {
+        while ( SERIES_COUNT > counter_ui8 ) {
             printf("Enter a non-negative number between %d - %d: ", ZERO, UINT8_MAX);
             if (VALID_INPUT != scanf("%hhu", &number_ui8)) {
                 printf("Invalid input. Please enter a valid non-negative number.\n");
