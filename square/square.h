@@ -1,0 +1,1 @@
+float square(float value); // function prototype
